@@ -1,5 +1,6 @@
 // Need intersection observer here to give rid of title + subtitle and lower the opacity of the circle.
 
+// Need to figure out SVG for this page. Need something with a sky, stars, the circle logo, and a hill or something.
 const About = () => {
     return ( 
     <div id="about">
