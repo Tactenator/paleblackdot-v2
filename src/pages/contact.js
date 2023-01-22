@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { easeOut, motion as m } from 'framer-motion'
 
 const Contact = () => {
 
@@ -13,7 +14,12 @@ const Contact = () => {
         // maybe send a modal? Maybe change to another SVG for something received
     }
     return ( 
-    <div id="contact">
+    <m.div 
+        id="contact"
+        initial={{y: '100%'}}
+        animate={{ y: '0%', transition: {duration: 0.5, ease: "easeOut" }}}
+        exit={{ y: '0%', transition: {duration: 0 } }}
+    >
         <h1>Let's Get Started</h1>
         <form className="contact-form">
             <label>Name</label>
@@ -42,7 +48,7 @@ const Contact = () => {
 
             <button onClick={((e) => handleSubmit(e))}>Submit</button>
         </form>
-    </div> );
+    </m.div> );
 }
  
 export default Contact;

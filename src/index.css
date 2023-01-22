@@ -4,6 +4,7 @@
   margin:0; 
   padding: 0; 
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 body {
@@ -22,6 +23,8 @@ body {
   font-size: 2vw; 
   margin: 2vw; 
   color: #fff; 
+  position: relative; 
+  z-index: 20;
 }
 
 .navbar a::before {
@@ -51,7 +54,10 @@ body {
   width: 100%; 
   height: 100vh; 
   color: #fff; 
-  padding: 5vh 5vw;
+  padding: 8vh 8vw;
+  position: absolute; 
+  top: 0; 
+  left: 0;
 }
 
 
@@ -92,6 +98,32 @@ svg {
   font-size: 4em; 
 }
 
+#about {
+  width: inherit;
+  background-image: linear-gradient(
+    0deg,
+    hsl(205deg 55% 27%) 0%,
+    hsl(207deg 58% 25%) 2%,
+    hsl(210deg 63% 24%) 3%,
+    hsl(213deg 69% 23%) 6%,
+    hsl(216deg 80% 22%) 10%,
+    hsl(215deg 98% 20%) 14%,
+    hsl(215deg 96% 19%) 18%,
+    hsl(214deg 94% 18%) 24%,
+    hsl(212deg 91% 17%) 30%,
+    hsl(208deg 88% 16%) 36%,
+    hsl(210deg 89% 15%) 44%,
+    hsl(213deg 91% 14%) 56%,
+    hsl(216deg 93% 13%) 64%,
+    hsl(220deg 96% 11%) 72%,
+    hsl(220deg 98% 9%) 80%,
+    hsl(218deg 97% 8%) 81%,
+    hsl(215deg 95% 7%) 88%,
+    hsl(211deg 94% 6%) 95%,
+    hsl(206deg 93% 5%) 100%
+  )
+}
+
 #about p {
   width: 40%; 
   font-size: 2em;
@@ -103,6 +135,7 @@ svg {
   display: flex; 
   flex-direction: column;
   align-items: center;
+  background: rgb(26, 44, 150)
 }
 
 #contact h1 {
