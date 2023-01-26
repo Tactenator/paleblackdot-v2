@@ -11,26 +11,31 @@ const About = () => {
         initial={{opacity: 0}}
         animate={{ opacity: 1,  transition: {duration: 1, transition: "easeOut" }}}
         exit={{ opacity: 0, transition: {duration: 0.6 } }}>
-        <div className='sky'>
-            <Circle />
-            <span className='stars'></span>
-            <span className='stars'></span>
-            <span className='stars'></span>
-            <span className='stars'></span>
-            <span className='stars'></span>
+        <Circle />
+        <m.h1
+            initial={{ y: '100%'}}
+            animate={{ y: 0 }}
+            transition={{ delay: 0.3, duration: 0.5, ease: "easeInOut"}}>
+            Better Experiences <br></br>
+            Better Services
+        </m.h1>
+        <m.p>
+            Your business deserves the best. We strive to provide you and your customers the best digital experience possible.
+        </m.p>
+        <div className='services-container'>
+            <div className='service'>
+                <h4>Front End Development</h4>
+                <p>Design meets development providing your customers a great experience.</p>
+            </div>
+            <div className='service'>
+                <h4>Mobile Focused</h4>
+                <p>Android or iPhone, your site will accessible on all platforms</p>
+            </div>
+            <div className='service'>
+                <h4>Creating Your Ideas</h4>
+                <p>Looking to add a store? Maybe something else? We got your back</p>
+            </div>
         </div>
-        <div>
-            <m.h1
-                initial={{ y: '100%'}}
-                animate={{ y: 0 }}
-                transition={{ delay: 0.3, duration: 0.5, ease: "easeInOut"}}>
-                Who We Are
-            </m.h1>
-        </div>
-        <p>
-            Pale Black Dot is a local software development company that specializes in working with small businesses. We provide local businesses the means
-            to develop a powerful online presence as well provide their customers a great online experience. 
-        </p>
     </m.div> );
 }
  

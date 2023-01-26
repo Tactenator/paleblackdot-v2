@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import Logo from '../components/svglogo'
 import { motion as m } from 'framer-motion'
 
@@ -7,8 +9,8 @@ const Home = () => {
         show: {
           opacity: 1,
           transition: {
-            delay: 1, 
-            staggerChildren: 1.2
+            delay: 0.5, 
+            staggerChildren: 1
           }
         }
       }
@@ -30,8 +32,10 @@ const Home = () => {
                 <m.h1 variants={item}>Professional</m.h1>
                 <m.h1 variants={item}>Local</m.h1>
                 <m.p variants={item}>Pale Black Dot is a locally owned, Omaha based Web Development Service Company</m.p>
-                <m.p variants={item}>We provide local businesses with the services they need to stay relevant and </m.p>
-                <m.button variants={item}>About Us</m.button>
+                <m.p variants={item}>We provide local businesses with the services they need to stay relevant online </m.p>
+                <Link to="/about">
+                  <m.button variants={item}>Our Services</m.button>
+                </Link>
             </m.div>
         </m.div>
      );
