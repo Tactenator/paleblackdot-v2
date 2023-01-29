@@ -156,6 +156,7 @@ svg  {
 
 #about h1 {
   font-size: 4vw; 
+  overflow: hidden;
 }
 
 #about {
@@ -190,12 +191,24 @@ svg  {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .services {
   display: flex; 
   flex-direction: column;
- text-align: center;
+  text-align: center;
+  height: 100%; 
+}
+
+.services span {
+  font-size: 3rem; 
+}
+
+#mobile, #frontend, #ideas {
+  padding: 5vh 0; 
+  width: 30%; 
+  height: auto;
 }
 
 #contact {

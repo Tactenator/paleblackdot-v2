@@ -1,5 +1,8 @@
 import { motion as m } from 'framer-motion'
 import Circle from '../components/circlesvg'
+import Mobile from '../components/mobile';
+import Frontend from '../components/frontend'
+import Ideas from '../components/ideas'
 
 // Need intersection observer here to give rid of title + subtitle and lower the opacity of the circle.
 
@@ -13,9 +16,9 @@ const About = () => {
         exit={{ opacity: 0, transition: {duration: 0.6 } }}>
         <Circle />
         <m.h1
-            initial={{ y: '100%'}}
-            animate={{ y: 0 }}
-            transition={{ delay: 0.3, duration: 0.5, ease: "easeInOut"}}>
+            initial={{ opacity: 0}}
+            animate={{ opacity: "100%" }}
+            transition={{ delay: 0.2, duration: 0.5, ease: "easeInOut"}}>
             Better Experiences <br></br>
             Better Services
         </m.h1>
@@ -25,15 +28,18 @@ const About = () => {
         <div className='services-container'>
             <div className='service'>
                 <h4>Front End Development</h4>
-                <p>Design meets development providing your customers a great experience.</p>
+                <span>Design meets development providing your customers a great experience.</span>
+                <Frontend />
             </div>
             <div className='service'>
                 <h4>Mobile Focused</h4>
-                <p>Android or iPhone, your site will accessible on all platforms</p>
+                <span>Android or iPhone, your site will accessible on all platforms</span>
+                <Mobile />
             </div>
             <div className='service'>
                 <h4>Creating Your Ideas</h4>
-                <p>Looking to add a store? Maybe something else? We got your back</p>
+                <span>Looking to add a store? Maybe something else? We got your back</span>
+                <Ideas />
             </div>
         </div>
     </m.div> );

@@ -33,7 +33,7 @@ const Home = () => {
                 <m.h1 variants={item}>Local</m.h1>
                 <m.p variants={item}>Pale Black Dot is a locally owned, Omaha based Web Development Service Company</m.p>
                 <m.p variants={item}>We provide local businesses with the services they need to stay relevant online </m.p>
-                <Link to="/about">
+                <Link to="/services">
                   <m.button variants={item}>Our Services</m.button>
                 </Link>
             </m.div>
