@@ -155,7 +155,7 @@ svg  {
 }
 
 #about h1 {
-  font-size: 4vw; 
+  font-size: 3vw; 
   overflow: hidden;
 }
 
@@ -181,7 +181,7 @@ svg  {
 
 #about p {
   width: 40%; 
-  font-size: 2em;
+  font-size: 1.5em;
   padding: 3% 0; 
   color: rgb(226, 226, 226);  
 }
@@ -192,6 +192,7 @@ svg  {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 5vh; 
 }
 
 .services {
@@ -201,14 +202,32 @@ svg  {
   height: 100%; 
 }
 
-.services span {
-  font-size: 3rem; 
+.service span {
+  font-size: 1.2rem; 
+  width: 70%; 
+  
 }
 
 #mobile, #frontend, #ideas {
-  padding: 5vh 0; 
+  padding: 6vh 0; 
   width: 30%; 
   height: auto;
+}
+
+#mobile {
+  width: 40%; 
+}
+
+#smallCog-Outer, #smallCog-Inner {
+  animation: rotateSmall 5s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#largeCog-Outer, #largeCog-Inner {
+  animation: rotateLarge 5s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
 }
 
 #contact {
@@ -324,5 +343,23 @@ button {
   100% {
     fill: white; 
     stroke-dashoffset: 0%;
+  }
+}
+
+@keyframes rotateSmall {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg); 
+  }
+}
+
+@keyframes rotateLarge {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg); 
   }
 }

@@ -27,17 +27,17 @@ const About = () => {
         </m.p>
         <div className='services-container'>
             <div className='service'>
-                <h4>Front End Development</h4>
+                <h2>Front End Development</h2>
                 <span>Design meets development providing your customers a great experience.</span>
                 <Frontend />
             </div>
             <div className='service'>
-                <h4>Mobile Focused</h4>
+                <h2>Mobile Focused</h2>
                 <span>Android or iPhone, your site will accessible on all platforms</span>
                 <Mobile />
             </div>
             <div className='service'>
-                <h4>Creating Your Ideas</h4>
+                <h2>Creating Your Ideas</h2>
                 <span>Looking to add a store? Maybe something else? We got your back</span>
                 <Ideas />
             </div>
