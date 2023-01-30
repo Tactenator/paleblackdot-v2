@@ -24,16 +24,7 @@ body {
   color: #fff; 
   position: relative; 
   z-index: 20;
-}
-
-.navbar a::before {
-  content: '';
-  height: 5px; 
-  width: 5px; 
-  background: #fff; 
-  border-radius: 50%; 
-  text-align: center;
-  display: block; 
+  transition: 0.3s; 
 }
 
 .navbar a {
@@ -42,6 +33,7 @@ body {
 
 .navbar a:hover {
   color: #fff; 
+  text-decoration: underline;
 }
 
 .navbar a:visited {
@@ -165,17 +157,17 @@ svg  {
 }
 
 #about-svg svg {
-  width: 10vw; 
+  width: 4vw; 
   height: auto; 
-  top: 25%; 
+  top: 47%; 
   left:unset;
-  right: 20%;
+  right: 43%;
   fill: none;
   stroke: white;
   stroke-width: 4; 
   stroke-dasharray: 200%;
   stroke-dashoffset: 200%; 
-  animation: fill 3s ease-in forwards; 
+  animation: fill 3s ease-in-out infinite; 
   position: absolute; 
 }
 
@@ -195,27 +187,31 @@ svg  {
   margin-top: 5vh; 
 }
 
-.services {
+.service {
   display: flex; 
   flex-direction: column;
   text-align: center;
+  width: auto; 
   height: 100%; 
+  position: relative; 
+  align-items: center;
+}
+
+.service h2 {
+  font-weight: bold;
 }
 
 .service span {
-  font-size: 1.2rem; 
+  font-size: 1.3rem; 
   width: 70%; 
+  padding: 1vh 0; 
   
 }
 
 #mobile, #frontend, #ideas {
   padding: 6vh 0; 
-  width: 30%; 
-  height: auto;
-}
-
-#mobile {
   width: 40%; 
+  height: auto;
 }
 
 #smallCog-Outer, #smallCog-Inner {
@@ -228,6 +224,28 @@ svg  {
   animation: rotateLarge 5s infinite linear;
   transform-origin: center;
   transform-box: fill-box;
+}
+
+#principles {
+  width: 100%; 
+  height: 100vh; 
+  padding: 8vh 0;
+  margin-top: 16vh;   
+  background: #12171c;
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.principles-container {
+  width: 100%; 
+}
+
+.principle {
+  padding-bottom: 10vh; 
+}
+
+.principle p {
+  width: 100%; 
 }
 
 #contact {

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-import Logo from '../components/svglogo'
+import Logo from '../components/svgs/svglogo'
 import { motion as m } from 'framer-motion'
 
 const Home = () => {
