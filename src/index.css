@@ -41,7 +41,7 @@ body {
   color: #fff; 
 }
 
-#home, #about, #contact {
+#home, #contact {
   width: 100%; 
   height: 100vh; 
   color: #fff; 
@@ -49,6 +49,15 @@ body {
   position: absolute; 
   top: 0; 
   left: 0;
+}
+
+#about {
+  width: 100%; 
+  height: 100vh; 
+  color: #fff; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
 }
 
 #home {
@@ -83,7 +92,7 @@ body {
   font-size: 1vw;
 }
 
-.home-welcome a button {
+.home-welcome a button, .services-contact a button {
   padding: 1em; 
   width: inherit; 
   background: #fff; 
@@ -96,13 +105,13 @@ body {
   z-index: 1; 
 }
 
-.home-welcome a button:hover {
+.home-welcome a button:hover, .services-contact a button:hover {
   color: #fff; 
-  border: 1px solid #fff; 
+  border-radius: 15px; 
   cursor: pointer; 
 }
 
-.home-welcome a button:before {
+.home-welcome a button:before, .services-contact a button:before {
   content: "";
   position: absolute; 
   background: #000; 
@@ -114,7 +123,7 @@ body {
   z-index: -1; 
 }
 
-.home-welcome a button:hover:before {
+.home-welcome a button:hover:before, .services-contact a button:hover:before {
   right: 0; 
 }
 
@@ -154,6 +163,10 @@ svg  {
 #about {
   width: 100%;
   background: #192027;
+}
+
+.about {
+  padding: 8vh 8vw; 
 }
 
 #about-svg svg {
@@ -227,9 +240,7 @@ svg  {
 }
 
 #principles {
-  width: 100%; 
-  height: 100vh; 
-  padding: 8vh 0;
+  padding: 8vh 8vw;
   margin-top: 16vh;   
   background: #12171c;
   display: grid; 
@@ -246,6 +257,27 @@ svg  {
 
 .principle p {
   width: 100%; 
+}
+
+.services-contact {
+  background: #192027; 
+  text-align: center; 
+  height: 50vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;  
+}
+
+.services-contact-button {
+  width: 30vw;
+  background: white; 
+  border: none; 
+  border-radius: 15px; 
+}
+
+.services-contact-button:hover{
+  cursor: pointer; 
 }
 
 #contact {

@@ -4,6 +4,8 @@ import Frontend from '../components/svgs/frontend'
 import Circle from '../components/svgs/circlesvg'
 import Ideas from '../components/svgs/ideas'
 import Principles from '../components/principles';
+import { Link } from 'react-router-dom';
+import AboutContact from '../components/aboutContact';
 
 // Need intersection observer here to give rid of title + subtitle and lower the opacity of the circle.
 
@@ -30,6 +32,7 @@ const About = () => {
         initial={{opacity: 0}}
         animate={{ opacity: 1,  transition: {duration: 1, transition: "easeOut" }}}
         exit={{ opacity: 0, transition: {duration: 0.6 } }}>
+        <div className='about'>
         <m.h1
             initial={{ opacity: 0}}
             animate={{ opacity: "100%" }}
@@ -58,7 +61,10 @@ const About = () => {
                 <Ideas />
             </m.div>
         </m.div>
+        </div>
+        
         <Principles />
+        <AboutContact />
     </m.div> );
 }
  
