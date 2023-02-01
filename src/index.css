@@ -13,7 +13,7 @@ body {
   font-family: 'Caladea', serif;
 }
 
-.navbar {
+nav {
   display: flex; 
   flex-direction: row;
   gap: 5vw; 
@@ -25,6 +25,58 @@ body {
   position: relative; 
   z-index: 20;
   transition: 0.3s; 
+}
+
+#hamburger-icon{
+  display: none;
+  margin: auto 0; 
+  cursor: pointer; 
+}
+
+#hamburger-icon span{
+  display: inline-block;
+  width: 35px; 
+  height: 3px; 
+  background-color: #fff; 
+  transition: 0.4s; 
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 7vh; 
+  left: 0;
+  height: 100vh; 
+  width: 100vw;  
+  background-color: #12171c; 
+  color: #fff; 
+  z-index: 5;
+  overflow: hidden; 
+}
+
+.mobile-menu a {
+  font-size: 5vh; 
 }
 
 .navbar a {
@@ -49,6 +101,7 @@ body {
   position: absolute; 
   top: 0; 
   left: 0;
+  overflow: hidden; 
 }
 
 #about {
@@ -92,7 +145,7 @@ body {
   font-size: 1vw;
 }
 
-.home-welcome a button, .services-contact a button {
+.home-welcome a button, .services-contact a button, .contact-button {
   padding: 1em; 
   width: inherit; 
   background: #fff; 
@@ -105,13 +158,13 @@ body {
   z-index: 1; 
 }
 
-.home-welcome a button:hover, .services-contact a button:hover {
+.home-welcome a button:hover, .services-contact a button:hover, .contact-button:hover {
   color: #fff; 
   border-radius: 15px; 
   cursor: pointer; 
 }
 
-.home-welcome a button:before, .services-contact a button:before {
+.home-welcome a button:before, .services-contact a button:before, .contact-button:before {
   content: "";
   position: absolute; 
   background: #000; 
@@ -123,8 +176,12 @@ body {
   z-index: -1; 
 }
 
-.home-welcome a button:hover:before, .services-contact a button:hover:before {
+.home-welcome a button:hover:before, .services-contact a button:hover:before, .contact-button:hover:before {
   right: 0; 
+}
+
+.contact-button {
+  width: 100%; 
 }
 
 svg  {
@@ -157,7 +214,6 @@ svg  {
 
 #about h1 {
   font-size: 3vw; 
-  overflow: hidden;
 }
 
 #about {
@@ -167,21 +223,6 @@ svg  {
 
 .about {
   padding: 8vh 8vw; 
-}
-
-#about-svg svg {
-  width: 4vw; 
-  height: auto; 
-  top: 47%; 
-  left:unset;
-  right: 43%;
-  fill: none;
-  stroke: white;
-  stroke-width: 4; 
-  stroke-dasharray: 200%;
-  stroke-dashoffset: 200%; 
-  animation: fill 3s ease-in-out infinite; 
-  position: absolute; 
 }
 
 #about p {
@@ -283,8 +324,8 @@ svg  {
 #contact {
   display: flex; 
   flex-direction: column;
-  align-items: center;
-  background: rgb(26, 44, 150)
+  align-items: center; 
+  background: #12171c
 }
 
 #contact h1 {
@@ -411,5 +452,114 @@ button {
   }
   to {
     transform: rotate(360deg); 
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    display: none; 
+  }
+
+  .mobile-menu a {
+    margin: 2vh 0; 
+  }
+
+  .mobile-menu a:visited {
+    text-decoration: none;
+    color: #fff; 
+  }
+
+  .mobile-menu div svg {
+    width: 80%; 
+    height: auto; 
+    margin: auto; 
+  }
+
+  #hamburger-icon{
+    display: block; 
+    margin-right: 10px; 
+  }
+
+  #home {
+    flex-direction: column;
+  }
+
+  .home-welcome {
+    height: 80vh; 
+    width: 100%; 
+    padding: 3vh 5vw;  
+  }
+  
+  .home-welcome h1 {
+    font-size: 11vw; 
+  }
+  
+  .home-welcome p {
+    font-size: 5vw; 
+  }
+
+  .home-welcome a button { 
+    margin-top: 3vh; 
+  }
+  
+  .home-welcome a {
+    font-size: 3vw;
+  }
+
+  #about {
+    overflow-x: hidden; 
+  }
+
+  #about h1 {
+  font-size:11vw; 
+  }
+
+  #about p {
+  width: 80%; 
+  font-size: 1.5em;
+  padding: 3% 0; 
+  color: rgb(226, 226, 226);  
+  }
+
+  .services-container {
+    gap: 10px;
+  }
+
+  .service h2 {
+    font-size: 1rem;
+  font-weight: bold;
+  }
+
+  .service span {
+  font-size: 1rem; 
+  width: 70%; 
+  padding: 1vh 0; 
+  
+  }
+
+  #mobile, #frontend, #ideas { 
+    width: 70%; 
+  }
+
+  #principles {
+  display: flex; 
+  flex-direction: column;
+  }
+
+  #principles h1 {
+    font-size: 5vh;  
+    margin-bottom: 3vh; 
+  }
+
+  .services-contact {
+    padding: 8vh 8vw; 
+  }
+
+  .services-contact a button {
+   margin-top: 4vh; 
+  }
+
+  .contact-form {
+    width: 100%; 
   }
 }

@@ -33,8 +33,8 @@ const Contact = () => {
     return ( 
     <m.div 
         id="contact"
-        initial={{y: '100%'}}
-        animate={{ y: '0%', transition: {duration: 0.5, ease: "easeOut" }}}
+        initial={{y: '100%', opacity: 0}}
+        animate={{ y: '0%', opacity: '100%', transition: {delay: 0.3, duration: 0.5, ease: "easeOut" }}}
         exit={{ y: '0%', transition: {duration: 0 } }}
     >   
     <div
@@ -82,7 +82,7 @@ const Contact = () => {
                 ></textarea>
             </m.div>
 
-            <button onClick={((e) => handleSubmit(e))}>Submit</button>
+            <button className="contact-button" onClick={((e) => handleSubmit(e))}>Submit</button>
         </m.form>
     </m.div> );
 }

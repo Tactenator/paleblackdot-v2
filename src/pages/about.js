@@ -1,16 +1,23 @@
 import { motion as m } from 'framer-motion'
 import Mobile from '../components/svgs/mobile';
 import Frontend from '../components/svgs/frontend'
-import Circle from '../components/svgs/circlesvg'
 import Ideas from '../components/svgs/ideas'
 import Principles from '../components/principles';
 import { Link } from 'react-router-dom';
-import AboutContact from '../components/aboutContact';
+import { useRef } from 'react'
 
 // Need intersection observer here to give rid of title + subtitle and lower the opacity of the circle.
 
 // Need to figure out SVG for this page. Need something with a sky, stars, the circle logo, and a hill or something.
 const About = () => {
+
+    const aboutRef = useRef(); 
+
+    const aboutScroll = () => {
+        console.log('clicked')
+        aboutRef.current.scrollIntoView({ behavior: "smooth" }) 
+    }
+
     const container = {
         hidden: { opacity: 0 },
         show: {
@@ -31,8 +38,8 @@ const About = () => {
         id="about"
         initial={{opacity: 0}}
         animate={{ opacity: 1,  transition: {duration: 1, transition: "easeOut" }}}
-        exit={{ opacity: 0, transition: {duration: 0.6 } }}>
-        <div className='about'>
+        exit={{ opacity: 0, transition: {duration: 0.3 } }}>
+        <div className='about' ref={aboutRef}>
         <m.h1
             initial={{ opacity: 0}}
             animate={{ opacity: "100%" }}
@@ -53,7 +60,6 @@ const About = () => {
                 <h2>Mobile Focused</h2>
                 <span>Android or iPhone, your site will accessible on all platforms</span>
                 <Mobile />
-                <Circle />
             </m.div>
             <m.div className='service' variants={item}>
                 <h2>Creating Your Ideas</h2>
@@ -64,7 +70,12 @@ const About = () => {
         </div>
         
         <Principles />
-        <AboutContact />
+        <div className='services-contact'>
+            <h1>Ready to get started? Let's get to work</h1>
+            <Link to="/contact">
+                <button onClick={(() => aboutScroll())}>Contact Information</button>
+            </Link>
+        </div>
     </m.div> );
 }
  
