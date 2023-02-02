@@ -14,7 +14,6 @@ const About = () => {
     const aboutRef = useRef(); 
 
     const aboutScroll = () => {
-        console.log('clicked')
         aboutRef.current.scrollIntoView({ behavior: "smooth" }) 
     }
 

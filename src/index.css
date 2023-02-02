@@ -79,6 +79,12 @@ nav {
   font-size: 5vh; 
 }
 
+.navbar {
+  display: flex; 
+  flex-direction: row;
+  gap: 5vw; 
+}
+
 .navbar a {
   text-decoration: none;
 }
@@ -190,12 +196,7 @@ svg  {
 }
 
 #circle path {
-  fill: none;
-  stroke: white;
-  stroke-width: 2; 
-  stroke-dasharray: 200%;
-  stroke-dashoffset: 200%; 
-  animation: fill 3s ease-in forwards;
+  fill: #fff;
 }
 
 #title path{
@@ -382,7 +383,7 @@ button {
   }
 }
 
-@keyframes fill {
+/* @keyframes fill {
   
   50% {
     stroke-dashoffset: 0;
@@ -391,7 +392,7 @@ button {
   100% {
     fill: white; 
   }
-}
+} */
 
 @keyframes titleFill {
   

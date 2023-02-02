@@ -1,8 +1,16 @@
 import { Link } from 'react-router-dom'
 import Logo from '../components/svgs/svglogo'
 import { motion as m } from 'framer-motion'
+import { useRef } from 'react'
 
 const Home = () => {
+    
+  const homeRef = useRef()
+
+  const scrollHome = () => {
+    homeRef.current.scrollIntoView({ behavior: "smooth" }) 
+  }
+
     const container = {
         hidden: { opacity: 0 },
         show: {
@@ -20,7 +28,7 @@ const Home = () => {
       }
 
     return ( 
-        <m.div id='home'
+        <m.div ref={homeRef} id='home'
         initial={{opacity: 0}}
         animate={{ opacity: 1,  transition: {duration: 1, transition: "easeOut" }}}
         exit={{ opacity: 0, transition: {duration: 0.5, delay: 0.5 } }}
@@ -33,7 +41,7 @@ const Home = () => {
                 <m.p variants={item}>Pale Black Dot is a locally owned, Omaha based Web Development Service Company</m.p>
                 <m.p variants={item}>We provide local businesses with the services they need to stay relevant online </m.p>
                 <Link to="/services">
-                  <m.button variants={item}>Our Services</m.button>
+                  <m.button onClick={(() => scrollHome())} variants={item}>Our Services</m.button>
                 </Link>
             </m.div>
         </m.div>
