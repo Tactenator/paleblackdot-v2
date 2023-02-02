@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navlogo from './svgs/navlogo.js'
-import Logo from './svgs/svglogo.js'
+
 
 const Navbar = () => {
 
