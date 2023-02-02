@@ -43,6 +43,7 @@ const Contact = () => {
         initial={{ y: '100%'}}
         animate={{ y: 0 }}
         transition={{ delay: 0.3, duration: 0.5, ease: "easeInOut"}}
+        exit={{ opacity: 0, transition: {duration: 0.3 } }}
         >Let's Get Started</m.h1>
     </div>
         <m.form className="contact-form"

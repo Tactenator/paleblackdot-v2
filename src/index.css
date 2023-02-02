@@ -30,7 +30,7 @@ nav {
 #hamburger-icon{
   display: none;
   margin: auto 0; 
-  cursor: pointer; 
+  cursor: pointer;  
 }
 
 #hamburger-icon span{
@@ -60,12 +60,13 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  margin-top: 6vh; 
 }
 
 .mobile-menu {
   display: none;
   position: absolute;
-  top: 7vh; 
+  top: 0;
   left: 0;
   height: 100vh; 
   width: 100vw;  
@@ -73,6 +74,10 @@ nav {
   color: #fff; 
   z-index: 5;
   overflow: hidden; 
+}
+
+.mobile-menu div {
+  margin-top: 10vh; 
 }
 
 .mobile-menu a {
@@ -83,6 +88,10 @@ nav {
   display: flex; 
   flex-direction: row;
   gap: 5vw; 
+}
+
+.navbar a:link {
+  color: #fff; 
 }
 
 .navbar a {
@@ -219,7 +228,7 @@ svg  {
 
 #about {
   width: 100%;
-  background: #192027;
+  background: #12171c;
 }
 
 .about {
@@ -245,7 +254,6 @@ svg  {
 .service {
   display: flex; 
   flex-direction: column;
-  text-align: center;
   width: auto; 
   height: 100%; 
   position: relative; 
@@ -254,6 +262,15 @@ svg  {
 
 .service h2 {
   font-weight: bold;
+  text-align: center;
+}
+
+.service span {
+  text-align: left;
+}
+
+.service div svg {
+  text-align: center;
 }
 
 .service span {
@@ -284,7 +301,7 @@ svg  {
 #principles {
   padding: 8vh 8vw;
   margin-top: 16vh;   
-  background: #12171c;
+  background: #192027;
   display: grid; 
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -302,7 +319,7 @@ svg  {
 }
 
 .services-contact {
-  background: #192027; 
+  background: #12171c; 
   text-align: center; 
   height: 50vh; 
   display: flex;

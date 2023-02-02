@@ -56,7 +56,7 @@ const About = () => {
                 <Frontend />
             </m.div>
             <m.div className='service' variants={item}>
-                <h2>Mobile Focused</h2>
+                <h2>Mobile Focused Engineering</h2>
                 <span>Android or iPhone, your site will accessible on all platforms</span>
                 <Mobile />
             </m.div>
