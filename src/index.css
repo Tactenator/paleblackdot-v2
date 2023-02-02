@@ -82,6 +82,7 @@ nav {
 
 .mobile-menu a {
   font-size: 5vh; 
+  color: #fff; 
 }
 
 .navbar {
@@ -90,7 +91,7 @@ nav {
   gap: 5vw; 
 }
 
-.navbar a:link {
+.navbar a:link, .mobile-menu a:link {
   color: #fff; 
 }
 
