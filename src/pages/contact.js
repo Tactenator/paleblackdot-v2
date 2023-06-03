@@ -8,11 +8,11 @@ const Contact = () => {
     const [ phone, setPhone ] = useState()
     const [ message, setMessage ] = useState()
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        console.log(`Name: ${name} Email: ${email} Phone: ${phone} Message: ${message}`)
-        // maybe send a modal? Maybe change to another SVG for something received
-    }
+    // const handleSubmit = (e) => {
+    //     e.preventDefault()
+    //     console.log(`Name: ${name} Email: ${email} Phone: ${phone} Message: ${message}`)
+    //     // maybe send a modal? Maybe change to another SVG for something received
+    // }
 
     const container = {
         hidden: { opacity: 0 },
@@ -84,7 +84,7 @@ const Contact = () => {
                 ></textarea>
             </m.div>
 
-            <button className="contact-button" onClick={((e) => handleSubmit(e))}>Submit</button>
+            <button className="contact-button" type="submit">Submit</button>
         </m.form>
     </m.div> );
 }
