@@ -60,6 +60,7 @@ const Contact = () => {
         data-netlify="true"
         onSubmit={((e) => handleSubmit(e))}
         >
+            <input type="hidden" name="form-name" value="Contact" />
             <m.div variants={item}>
                 <label>Name</label>
                 <input type='text' name="name"></input>
