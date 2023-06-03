@@ -50,6 +50,7 @@ const Contact = () => {
         variants={container}
         initial="hidden"
         animate="show"
+        data-netlify="true"
         >
             <m.div variants={item}>
                 <label>Name</label>
