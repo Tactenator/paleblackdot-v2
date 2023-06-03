@@ -3,11 +3,6 @@ import { motion as m } from 'framer-motion'
 
 const Contact = () => {
 
-    const [ name, setName ] = useState()
-    const [ email, setEmail ] = useState()
-    const [ phone, setPhone ] = useState()
-    const [ message, setMessage ] = useState()
-
     const formRef = useRef();
 
     function handleSubmit (e) {
@@ -63,40 +58,30 @@ const Contact = () => {
         initial="hidden"
         animate="show"
         data-netlify="true"
+        onSubmit={((e) => handleSubmit(e))}
         >
             <m.div variants={item}>
                 <label>Name</label>
-                <input type='text' name="name"
-                onChange={((e) => setName(e.target.value))}
-                value={name}
-                ></input>
+                <input type='text' name="name"></input>
             </m.div>
 
             <m.div variants={item}>
                 <label>Email</label>
-                <input type='email' name="email"
-                onChange={((e) => setEmail(e.target.value))}
-                value={email}
-                ></input>
+                <input type='email' name="email"></input>
             </m.div>
 
             <m.div variants={item}>
                 <label>Phone</label>
-                <input type='tel' name="phone"
-                onChange={((e) => setPhone(e.target.value))}
-                value={phone}
-                ></input>
+                <input type='tel' name="phone">
+                </input>
             </m.div>
 
             <m.div variants={item}>
                 <label>Message</label>
-                <textarea rows={10} cols={10}
-                onChange={((e) => setMessage(e.target.value))}
-                value={message} name="message"
-                ></textarea>
+                <textarea rows={10} cols={10}name="message"></textarea>
             </m.div>
 
-            <button className="contact-button" type="submit" onClick={((e) => handleSubmit(e))}>Submit</button>
+            <button className="contact-button" type="submit">Submit</button>
         </m.form>
     </m.div> );
 }
