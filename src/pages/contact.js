@@ -11,7 +11,7 @@ const Contact = () => {
         let formData = new FormData(formRef.current);
         console.log(formData)
 
-        fetch("../../public/contact-form.html", {
+        fetch("/", {
             method: "POST",
             headers : { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams(formData).toString(),
