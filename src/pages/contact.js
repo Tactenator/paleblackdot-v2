@@ -1,4 +1,4 @@
-import { useState, useRef } from "react"
+import {  useRef } from "react"
 import { motion as m } from 'framer-motion'
 
 const Contact = () => {
