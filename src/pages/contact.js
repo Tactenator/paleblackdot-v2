@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { motion as m } from 'framer-motion'
 
 const Contact = () => {
@@ -7,6 +7,8 @@ const Contact = () => {
     const [ email, setEmail ] = useState()
     const [ phone, setPhone ] = useState()
     const [ message, setMessage ] = useState()
+
+    const formRef = useRef();
 
     function handleSubmit (e) {
         e.preventDefault()
@@ -55,6 +57,7 @@ const Contact = () => {
         >Let's Get Started</m.h1>
     </div>
         <m.form className="contact-form"
+        ref={formRef}
         variants={container}
         initial="hidden"
         animate="show"
