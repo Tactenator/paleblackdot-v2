@@ -14,10 +14,11 @@ const Contact = () => {
         e.preventDefault()
 
         let formData = new FormData(formRef.current);
+        console.log(formData)
 
         fetch("../../public/contact-form.html", {
             method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            headers : { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams(formData).toString(),
         })
         .then(() => console.log('success'))
@@ -57,7 +58,7 @@ const Contact = () => {
         >Let's Get Started</m.h1>
     </div>
         <m.form className="contact-form"
-        ref={formRef}
+        ref={formRef} name="Contact" method="POST"
         variants={container}
         initial="hidden"
         animate="show"
@@ -65,7 +66,7 @@ const Contact = () => {
         >
             <m.div variants={item}>
                 <label>Name</label>
-                <input type='text'
+                <input type='text' name="name"
                 onChange={((e) => setName(e.target.value))}
                 value={name}
                 ></input>
@@ -73,7 +74,7 @@ const Contact = () => {
 
             <m.div variants={item}>
                 <label>Email</label>
-                <input type='email'
+                <input type='email' name="email"
                 onChange={((e) => setEmail(e.target.value))}
                 value={email}
                 ></input>
@@ -81,7 +82,7 @@ const Contact = () => {
 
             <m.div variants={item}>
                 <label>Phone</label>
-                <input type='tel'
+                <input type='tel' name="phone"
                 onChange={((e) => setPhone(e.target.value))}
                 value={phone}
                 ></input>
@@ -91,7 +92,7 @@ const Contact = () => {
                 <label>Message</label>
                 <textarea rows={10} cols={10}
                 onChange={((e) => setMessage(e.target.value))}
-                value={message}
+                value={message} name="message"
                 ></textarea>
             </m.div>
 
