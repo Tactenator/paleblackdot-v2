@@ -8,11 +8,19 @@ const Contact = () => {
     const [ phone, setPhone ] = useState()
     const [ message, setMessage ] = useState()
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault()
-    //     console.log(`Name: ${name} Email: ${email} Phone: ${phone} Message: ${message}`)
-    //     // maybe send a modal? Maybe change to another SVG for something received
-    // }
+    function handleSubmit (e) {
+        e.preventDefault()
+
+        let formData = new FormData(formRef.current);
+
+        fetch("../../public/contact-form.html", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+        })
+        .then(() => console.log('success'))
+        .catch((error) => alert(error));
+    }
 
     const container = {
         hidden: { opacity: 0 },
@@ -84,7 +92,7 @@ const Contact = () => {
                 ></textarea>
             </m.div>
 
-            <button className="contact-button" type="submit">Submit</button>
+            <button className="contact-button" type="submit" onClick={((e) => handleSubmit(e))}>Submit</button>
         </m.form>
     </m.div> );
 }
